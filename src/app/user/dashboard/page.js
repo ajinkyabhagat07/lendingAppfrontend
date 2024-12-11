@@ -1,10 +1,11 @@
 'use client'
-import React, { useEffect, useState} from "react";
 import LoanTypeCard from "@/components/LoanTypeCard";
 import { getAllLoanTypes } from "@/lib/loanTypes";
+import React, { useEffect, useState} from "react";
 
 
-export default function Home() {
+
+export default function UserDashBoard() {
   const [loanTypes, setLoanTypes] = useState([]);
   const [limit, setLimit] = useState(10);
   const [page, setPage] = useState(1);
@@ -24,7 +25,6 @@ export default function Home() {
   }, [limit, page]);
 
   return (
-    
     <div className="min-h-screen bg-gray-50 -mt-12 pt-12 px-6">
     <div className="text-center mb-12">
       <h1 className="text-4xl font-bold text-blue-700">Explore Our Loan Options</h1>

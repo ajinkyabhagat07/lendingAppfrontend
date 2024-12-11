@@ -2,20 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Global Customizations */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-gray-50 text-gray-800 font-sans;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+/* Header Styling */
+header {
+  @apply bg-white border-b border-gray-200 shadow-md sticky top-0 z-50;
+}
+
+header nav a {
+  @apply text-gray-700 hover:text-blue-600 font-medium transition duration-200;
+}
+
+/* Button Styling */
+header a.signup {
+  @apply bg-blue-600 text-white px-5 py-2 rounded-full shadow-md hover:bg-blue-700 font-medium transition duration-200;
+}
+
+/* Main Content Area */
+main {
+  @apply container mx-auto px-6 py-12;
+}
+
+/* Navbar Styling */
+header {
+  @apply bg-white shadow-lg sticky top-0 z-50 border-b border-gray-300;
+}
+
+header .container {
+  @apply flex justify-between items-center mx-auto px-8 py-4 max-w-screen-xl;
+}
+
+header .logo {
+  @apply flex items-center space-x-2;
+}
+
+header .logo img {
+  @apply h-10;
+}
+
+header .logo span {
+  @apply text-lg font-bold text-gray-800;
+}
+
+header nav a {
+  @apply text-gray-600 hover:text-blue-600 font-medium transition-all duration-300;
+}
+
+header nav a:hover {
+  @apply underline underline-offset-4 decoration-2 decoration-blue-600;
+}
+
+header .auth-buttons a {
+  @apply px-5 py-2 rounded-full font-medium transition-all duration-300;
+}
+
+header .auth-buttons a.login {
+  @apply text-gray-600 hover:text-blue-600;
+}
+
+header .auth-buttons a.signup {
+  @apply bg-blue-600 text-white hover:bg-blue-700 shadow-md;
 }
